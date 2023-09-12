@@ -13,7 +13,7 @@
 		7BC941332AB059A700A103CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC941312AB059A700A103CF /* Main.storyboard */; };
 		7BC941352AB059A800A103CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BC941342AB059A800A103CF /* Assets.xcassets */; };
 		7BC941382AB059A800A103CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC941362AB059A800A103CF /* LaunchScreen.storyboard */; };
-		7BC941452AB0708800A103CF /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC941442AB0708800A103CF /* LoginPageViewController.swift */; };
+		7BC941452AB0708800A103CF /* SidePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC941442AB0708800A103CF /* SidePageViewController.swift */; };
 		7BC941482AB0832600A103CF /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC941462AB0832600A103CF /* OptionTableViewCell.swift */; };
 		7BC941492AB0832600A103CF /* OptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BC941472AB0832600A103CF /* OptionTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -27,7 +27,7 @@
 		7BC941342AB059A800A103CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BC941372AB059A800A103CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BC941392AB059A800A103CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7BC941442AB0708800A103CF /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
+		7BC941442AB0708800A103CF /* SidePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidePageViewController.swift; sourceTree = "<group>"; };
 		7BC941462AB0832600A103CF /* OptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableViewCell.swift; sourceTree = "<group>"; };
 		7BC941472AB0832600A103CF /* OptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,7 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				7BC9412F2AB059A700A103CF /* HomeViewController.swift */,
-				7BC941442AB0708800A103CF /* LoginPageViewController.swift */,
+				7BC941442AB0708800A103CF /* SidePageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -173,7 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BC941302AB059A700A103CF /* HomeViewController.swift in Sources */,
-				7BC941452AB0708800A103CF /* LoginPageViewController.swift in Sources */,
+				7BC941452AB0708800A103CF /* SidePageViewController.swift in Sources */,
 				7BC9412C2AB059A700A103CF /* AppDelegate.swift in Sources */,
 				7BC941482AB0832600A103CF /* OptionTableViewCell.swift in Sources */,
 				7BC9412E2AB059A700A103CF /* SceneDelegate.swift in Sources */,

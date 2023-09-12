@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginPageViewController: UIViewController {
+class SidePageViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -29,42 +29,32 @@ class LoginPageViewController: UIViewController {
         loginButton.tintColor = .white
         loginButton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
         
-        
     }
-
-    
     
 }
 
-extension LoginPageViewController: UITableViewDataSource, UITableViewDelegate {
+extension SidePageViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         options.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell",for: indexPath) as! OptionTableViewCell
-        cell.optionButton.setTitle(options[indexPath.row], for: .normal)
-        cell.optionButton.setTitleColor(.white, for: .normal)
         cell.backgroundColor = UIColor(named: "AccentColor")
+        cell.optionLabel.text = options[indexPath.row]
         cell.selectionStyle = .none
-        cell.optionButton.tag = indexPath.row
-        cell.optionButton.addTarget(self, action: #selector(optionButtonPressed(sender:)), for: .touchUpInside)
-
+        
+        if cell.optionLabel.text == "站點資訊" {
+            cell.optionLabel.textColor = .darkGray
+        }
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let locationInfo = options[indexPath.row]
-       print(locationInfo)
-    }
-    
-    
-    @objc func optionButtonPressed(sender: UIButton) {
-        guard let option = sender.currentTitle else { return }
-        if option == "站點資訊" {
-            
-            
+        if locationInfo == "站點資訊" {
+            navigationController?.popViewController(animated: true)
         }
     }
-    
 }
