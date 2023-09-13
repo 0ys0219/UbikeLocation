@@ -1,20 +1,21 @@
 //
-//  OptionTableViewCell.swift
+//  ResultCell.swift
 //  UbikeLocation
 //
-//  Created by 林育生 on 2023/9/12.
+//  Created by 林育生 on 2023/9/13.
 //
 
 import UIKit
 
-class OptionTableViewCell: UITableViewCell {
+class ResultDetailCell: UITableViewCell {
 
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var areaLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
     
-    @IBOutlet weak var optionLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        optionLabel.textColor = .white
-        
+       
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
