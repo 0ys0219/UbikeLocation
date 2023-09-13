@@ -52,8 +52,9 @@ extension SidePageViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let locationInfo = options[indexPath.row]
-        if locationInfo == "站點資訊" {
+        let option = options[indexPath.row]
+        
+        if option == "站點資訊" {
             navigationController?.popViewController(animated: true)
         }
     }

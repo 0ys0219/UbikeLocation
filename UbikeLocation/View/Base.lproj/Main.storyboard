@@ -18,33 +18,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="xuK-eW-LYQ">
-                                <rect key="frame" x="25" y="162" width="343" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <scopeButtonTitles>
-                                    <string>Title</string>
-                                    <string>Title</string>
-                                </scopeButtonTitles>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Wr4-84-oPn"/>
-                                </connections>
-                            </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="站點資訊" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cM-MP-maO">
                                 <rect key="frame" x="35.000000000000007" y="133" width="81.666666666666686" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <searchBar contentMode="redraw" fixedFrame="YES" showsBookmarkButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HWI-Bp-G8f">
+                                <rect key="frame" x="0.0" y="158" width="393" height="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="RGk-33-nqw"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jQz-ar-BJt">
+                                <rect key="frame" x="33" y="245" width="327" height="573"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hB6-hs-BZS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6cM-MP-maO" firstAttribute="leading" secondItem="hB6-hs-BZS" secondAttribute="leading" constant="35" id="Ipy-uu-w7U"/>
                             <constraint firstItem="6cM-MP-maO" firstAttribute="top" secondItem="hB6-hs-BZS" secondAttribute="top" constant="30" id="UWS-Pp-xaU"/>
-                            <constraint firstItem="hB6-hs-BZS" firstAttribute="trailing" secondItem="xuK-eW-LYQ" secondAttribute="trailing" constant="25" id="feK-bv-FM8"/>
-                            <constraint firstItem="hB6-hs-BZS" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6cM-MP-maO" secondAttribute="trailing" symbolic="YES" id="lB0-KV-v5t"/>
-                            <constraint firstItem="xuK-eW-LYQ" firstAttribute="top" secondItem="6cM-MP-maO" secondAttribute="bottom" constant="5" id="qF9-n0-1kK"/>
-                            <constraint firstItem="xuK-eW-LYQ" firstAttribute="leading" secondItem="hB6-hs-BZS" secondAttribute="leading" constant="25" id="ylj-sk-CvM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="12Q-gG-jOm">
@@ -52,7 +54,9 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" id="lrn-zy-lTg"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="searchBar" destination="xuK-eW-LYQ" id="SGJ-Qb-glg"/>
+                        <outlet property="locationInfoLabel" destination="6cM-MP-maO" id="yiA-dS-7Rb"/>
+                        <outlet property="resultTableView" destination="jQz-ar-BJt" id="3tP-ve-yEE"/>
+                        <outlet property="searchBar" destination="HWI-Bp-G8f" id="bok-HE-bw8"/>
                         <segue destination="8uU-Y5-z8p" kind="show" identifier="goToSidePage" id="sN6-Xn-PJJ"/>
                     </connections>
                 </viewController>
