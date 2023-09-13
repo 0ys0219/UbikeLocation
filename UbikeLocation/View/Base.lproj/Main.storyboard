@@ -36,11 +36,6 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="RGk-33-nqw"/>
                                 </connections>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jQz-ar-BJt">
-                                <rect key="frame" x="33" y="245" width="327" height="573"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hB6-hs-BZS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -55,7 +50,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="locationInfoLabel" destination="6cM-MP-maO" id="yiA-dS-7Rb"/>
-                        <outlet property="resultTableView" destination="jQz-ar-BJt" id="3tP-ve-yEE"/>
                         <outlet property="searchBar" destination="HWI-Bp-G8f" id="bok-HE-bw8"/>
                         <segue destination="8uU-Y5-z8p" kind="show" identifier="goToSidePage" id="sN6-Xn-PJJ"/>
                     </connections>
