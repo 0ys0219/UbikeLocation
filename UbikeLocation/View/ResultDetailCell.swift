@@ -12,6 +12,7 @@ class ResultDetailCell: UITableViewCell {
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var areaLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
        
