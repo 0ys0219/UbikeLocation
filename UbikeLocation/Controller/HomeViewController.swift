@@ -146,6 +146,7 @@ class HomeViewController: UIViewController {
         titleTableView.layer.borderColor = UIColor.lightGray.cgColor
         titleTableView.layer.cornerRadius = 10
         titleTableView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        titleTableView.isScrollEnabled = false
     }
     
 //MARK: - resultTableViewSetting
@@ -293,6 +294,7 @@ extension HomeViewController: UISearchBarDelegate {
                 self.searchBar.text = ""
                 self.searchBar.placeholder = "查無此地點"
             }
+            self.resultTableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
             self.searchTableView.isHidden = true
             self.view.endEditing(true)
         }
